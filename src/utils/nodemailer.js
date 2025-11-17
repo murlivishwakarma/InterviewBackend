@@ -50,7 +50,7 @@ const mailKaro = async (email, sub, bodyText, credentials) => {
   
 
   const mailOptions = {
-    from: "Akshat Shukla <akshatvijay1302@gmail.com>",
+    from: "Murlidhar Carpenter <murlidharcarpenter19@gmail.com>",
     to: email,
     subject: sub,
     text: bodyText,
@@ -68,3 +68,4 @@ const mailKaro = async (email, sub, bodyText, credentials) => {
 };
 
 export default mailKaro;
+
