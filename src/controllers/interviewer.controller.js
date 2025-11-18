@@ -96,7 +96,9 @@ export const interviewerLogin = async (req, res) => {
     .cookie("refreshToken", refreshToken, options)
     .json({
       message: "Login successful",
-      user: { loggedInaInterviewer, accessToken, refreshToken },
+      user: loggedInaInterviewer, 
+      accessToken, 
+      refreshToken 
     });
 };
 
@@ -107,3 +109,4 @@ export const getCurrentUser = async (req, res) => {
     .status(200)
     .json({user: req.user, message: "User fetched successfully"});
 };
+
