@@ -21,6 +21,7 @@ app.use(
       "https://interviewer-v1-fcsr.vercel.app",
       "https://www.codeinterview.tech",
       "http://localhost:5173",
+      "https://interview-frontend-one.vercel.app/",
     ],
     credentials: true, // Allow cookies
     methods: ["GET", "POST", "PUT", "DELETE"], // Restrict methods
@@ -44,3 +45,4 @@ export { app };
 // Middleware (e.g., cookieParser, cors, express.json) for handling requests.
 // Route mounting where different route files are attached under /api.
 // Exporting the configured app so it can be used in index.js.
+
