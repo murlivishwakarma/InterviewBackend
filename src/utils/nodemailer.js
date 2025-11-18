@@ -122,7 +122,7 @@ const mailKaro = async (email, sub, bodyText, credentials) => {
 
     if (error) {
       console.error("Email error:", error);
-      return "Not sent";
+      return "Not send";
     }
 
     console.log("Email sent:", data?.id);
@@ -134,5 +134,6 @@ const mailKaro = async (email, sub, bodyText, credentials) => {
 };
 
 export default mailKaro;
+
 
 
