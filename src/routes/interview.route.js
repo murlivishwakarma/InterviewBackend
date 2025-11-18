@@ -11,8 +11,8 @@ import {
 import { verifyJWT } from "../middlewares/Backend/src/middlewares/auth.middleware.js";
 const app = Router();
 
-//app.post("/schedule-interview", verifyJWT, scheduleInterview);
-app.post("/schedule-interview", scheduleInterview);
+app.post("/schedule-interview", verifyJWT, scheduleInterview);
+//app.post("/schedule-interview", scheduleInterview);
 
 app.get("/view-interviews-for-interviewer/:id", verifyJWT, getInterviews);
 
@@ -28,4 +28,5 @@ app.get("/markascomplete/:interviewId", verifyJWT, markAsCompleted);
 app.post("/getresult/:interviewId", verifyJWT, getResultByInterviewId);
 
 export default app;
+
 
