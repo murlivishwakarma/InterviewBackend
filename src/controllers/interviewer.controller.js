@@ -83,6 +83,7 @@ export const interviewerLogin = async (req, res) => {
     "-passwordHash -refreshToken -accessToken"
   );
 
+  console.log(loggedInaInterviewer);
   const options = {
     httpOnly: true,
     secure: true, // Set this to true if your site is HTTPS
@@ -109,4 +110,5 @@ export const getCurrentUser = async (req, res) => {
     .status(200)
     .json({user: req.user, message: "User fetched successfully"});
 };
+
 
