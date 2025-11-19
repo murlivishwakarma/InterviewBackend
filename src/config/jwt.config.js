@@ -8,7 +8,7 @@ export const generateAccessToken = async (data) => {
 
   return await jwt.sign(payload, process.env.JWT_SECRET, {
     algorithm: "HS256",
-    expiresIn: "15m",
+    expiresIn: "1h",
   });
 };
 
@@ -37,4 +37,5 @@ export const generateAccessAndRefreshToken = async (payload) => {
 
   return { accessToken, refreshToken };
 };
+
 
