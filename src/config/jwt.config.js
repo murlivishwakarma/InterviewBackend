@@ -2,13 +2,13 @@ import jwt from "jsonwebtoken";
 
 export const generateAccessToken = async (data) => {
   const payload = { payload: data };
-  // console.log(payload);
+   console.log(payload);
 
-  // console.log(typeof payload);
+   console.log(typeof payload);
 
   return await jwt.sign(payload, process.env.JWT_SECRET, {
     algorithm: "HS256",
-    expiresIn: "1h",
+    expiresIn: "15m",
   });
 };
 
@@ -18,9 +18,9 @@ export const verifyToken = async (token) => {
 
 export const generateRefreshToken = async (data) => {
   const payload = { payload: data };
-  // console.log(payload);
+   console.log(payload);
 
-  // console.log(typeof payload);
+   console.log(typeof payload);
   return jwt.sign(payload, process.env.JWT_SECRET, {
     algorithm: "HS256",
     expiresIn: "1h",
@@ -37,3 +37,4 @@ export const generateAccessAndRefreshToken = async (payload) => {
 
   return { accessToken, refreshToken };
 };
+
